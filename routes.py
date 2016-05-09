@@ -5,11 +5,15 @@ Routes and views for the bottle application.
 from bottle import route, view
 from datetime import datetime
 
+import os
+import pymssql
+
 @route('/')
 @route('/home')
 @view('index')
 def home():
     """Renders the home page."""
+    print os.environ
     return dict(
         year=datetime.now().year
     )
