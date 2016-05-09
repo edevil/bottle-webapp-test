@@ -6,7 +6,7 @@ from bottle import route, view
 from datetime import datetime
 
 import os
-import pymssql
+#import pymssql
 
 @route('/')
 @route('/home')
