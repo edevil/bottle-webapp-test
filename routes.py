@@ -13,7 +13,7 @@ import os
 @view('index')
 def home():
     """Renders the home page."""
-    print os.environ
+    #print os.environ
     return dict(
         year=datetime.now().year
     )
