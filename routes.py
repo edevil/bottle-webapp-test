@@ -6,6 +6,7 @@ from bottle import route, view
 from datetime import datetime
 
 import os
+import sys
 #import pymssql
 
 @route('/')
@@ -13,7 +14,7 @@ import os
 @view('index')
 def home():
     """Renders the home page."""
-    #print os.environ
+    sys.stderr.write(str(os.environ))
     return dict(
         year=datetime.now().year
     )
